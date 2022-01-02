@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Check your health !</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./static/images/favicon.png">
+    <!-- Pignose Calender -->
+    <link href="./static/plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
+    <!-- Chartist -->
+    <link rel="stylesheet" href="./static/plugins/chartist/css/chartist.min.css">
+    <link rel="stylesheet" href="./static/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
+    <!-- Custom Stylesheet -->
+    <link href="./static/css/style2.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+<!--     <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div> -->
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="index2.html">
+                    <h2 style="color:white;">Contact info</h2>
+                </a>
+            </div>
+        </div>
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="nk-sidebar">           
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li class="nav-label">11 AM - 4 PM (EST)</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="fas fa-phone-alt"></i> <span class="nav-text">Phone</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a>+1) 703 - 468 - 4665</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="fas fa-envelope"></i> <span class="nav-text">Email</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a>junghwankim3077@gmail.com</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="fab fa-git"></i> <span class="nav-text">Repository</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="https://github.com/wldgkdl/Obesity_classifier">https://github.com/wldgkdl</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="fas fa-home"></i> <span class="nav-text">Home</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/">Go to Home page</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-1">
+                            <div class="card-body">
+                                <h1 class="card-title text-white">Gender</h1>
+                                <div class="d-inline-block">
+                                    <h2 class="text-grey">{{original_g}}</h2>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="far fa-user-circle"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-2">
+                            <div class="card-body">
+                                <h1 class="card-title text-white">Height</h1>
+                                <div class="d-inline-block">
+                                    <h2 class="text-grey">{{original_h}}</h2>
+                                    <p class="text-white mb-0">{{h_unit}}</p>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fas fa-arrows-alt-v"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-3">
+                            <div class="card-body">
+                                <h1 class="card-title text-white">Weight</h1>
+                                <div class="d-inline-block">
+                                    <h2 class="text-grey">{{original_w}}</h2>
+                                    <p class="text-white mb-0">{{w_unit}}</p>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fas fa-arrows-alt-h"></i></span>
+                            </div>
+                        </div>
+                    </div>
+<!--                     <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">If you want to try one more time</h3>
+                                <div class="d-inline-block">
+                                    <h4 class="text-white">Click below button</h4>
+                                    <a href="/spec" class="btn gradient-8 btn-lg border-0 btn-rounded px-4">Click here!</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <h5 class="mt-3 mb-1">Decison tree</h5>
+                                    <p class="m-0">{{DT_class}}</p>
+                                    <br>
+                                    <span class="data-attr" data-peity='{ "fill": ["{{DT_color}}", "#eeeeee"], "innerRadius": 70, "radius": 85 }'>{{DT_proba}}/100
+                                    </span>
+                                    <br>
+                                    <br>
+                                    <p class="m-0">Gauge indicates confidence level of prediction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <h5 class="mt-3 mb-1">Random Forest</h5>
+                                    <p class="m-0">{{RF_class}}</p>
+                                    <br>
+                                    <span class="data-attr" data-peity='{ "fill": ["{{RF_color}}", "#eeeeee"], "innerRadius": 70, "radius": 85 }'>{{RF_proba}}/100
+                                    </span>
+                                    <br>
+                                    <br>
+                                    <p class="m-0">Gauge indicates confidence level of prediction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <h5 class="mt-3 mb-1">Support Vector Machine</h5>
+                                    <p class="m-0">{{SVC_class}}</p>
+                                    <br>
+                                    <span class="data-attr" data-peity='{ "fill": ["{{SVC_color}}", "#eeeeee"], "innerRadius": 70, "radius": 85 }'>{{SVC_proba}}/100
+                                    </span>
+                                    <br>
+                                    <br>
+                                    <p class="m-0">Gauge indicates confidence level of prediction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <h5 class="mt-3 mb-1">Naive Bayes</h5>
+                                    <p class="m-0">{{NB_class}}</p>
+                                    <br>
+                                    <span class="data-attr" data-peity='{ "fill": ["{{NB_color}}", "#eeeeee"], "innerRadius": 70, "radius": 85 }'>{{NB_proba}}/100
+                                    </span>
+                                    <br>
+                                    <br>
+                                    <p class="m-0">Gauge indicates confidence level of prediction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <h5 class="mt-3 mb-1">Logistic Regression</h5>
+                                    <p class="m-0">{{LR_class}}</p>
+                                    <br>
+                                    <span class="data-attr" data-peity='{ "fill": ["{{LR_color}}", "#eeeeee"], "innerRadius": 70, "radius": 85 }'>{{LR_proba}}/100
+                                    </span>
+                                    <br>
+                                    <br>
+                                    <p class="m-0">Gauge indicates confidence level of prediction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <h5 class="mt-3 mb-1">Neural Network</h5>
+                                    <p class="m-0">{{NN_class}}</p>
+                                    <br>
+                                    <span class="data-attr" data-peity='{ "fill": ["{{NN_color}}", "#eeeeee"], "innerRadius": 70, "radius": 85 }'>{{NN_proba}}/100
+                                    </span>
+                                    <br>
+                                    <br>
+                                    <p class="m-0">Gauge indicates confidence level of prediction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <h5 class="mt-3 mb-1">K Nearest Neighbor</h5>
+                                    <p class="m-0">{{KNN_class}}</p>
+                                    <br>
+                                    <span class="data-attr" data-peity='{ "fill": ["{{KNN_color}}", "#eeeeee"], "innerRadius": 70, "radius": 85 }'>{{KNN_proba}}/100
+                                    </span>
+                                    <br>
+                                    <br>
+                                    <p class="m-0">Gauge indicates confidence level of prediction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <h5 class="mt-3 mb-1">XG Boost</h5>
+                                    <p class="m-0">{{XGB_class}}</p>
+                                    <br>
+                                    <span class="data-attr" data-peity='{ "fill": ["{{XGB_color}}", "#eeeeee"], "innerRadius": 70, "radius": 85 }'>{{XGB_proba}}/100
+                                    </span>
+                                    <br>
+                                    <br>
+                                    <p class="m-0">Gauge indicates confidence level of prediction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <span class="display-2"><i class="fas fa-th"></i></span>
+                                    <h1 class="mt-3" style = "color:{{Final_color}}">{{Final_class}}</h1>
+                                    <br>
+                                    <h6>The combined opinion of the eight models through hard voting is {{Final_class}}. <br>
+                                    If tie, soft voting was performed. <br>
+                                    If you want to test this application again, please click the button below.</h6>
+                                    <br>
+                                    <a href="/spec" class="btn gradient-9 btn-lg border-0 btn-rounded px-5">
+                                        Try again !
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://github.com/wldgkdl">Junghwan Kim</a> </p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="./static/plugins/common/common.min.js"></script>
+    <script src="./static/js/custom.min.js"></script>
+    <script src="./static/js/settings.js"></script>
+    <script src="./static/js/gleek.js"></script>
+    <script src="./static/js/styleSwitcher.js"></script>
+
+    <!-- Chartjs -->
+    <script src="./static/plugins/chart.js/Chart.bundle.min.js"></script>
+    <!-- Circle progress -->
+    <script src="./static/plugins/circle-progress/circle-progress.min.js"></script>
+    <!-- Datamap -->
+    <script src="./static/plugins/d3v3/index.js"></script>
+    <script src="./static/plugins/topojson/topojson.min.js"></script>
+    <script src="./static/plugins/datamaps/datamaps.world.min.js"></script>
+    <!-- Morrisjs -->
+    <script src="./static/plugins/raphael/raphael.min.js"></script>
+    <script src="./static/plugins/morris/morris.min.js"></script>
+    <!-- Pignose Calender -->
+    <script src="./static/plugins/moment/moment.min.js"></script>
+    <script src="./static/plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+    <!-- ChartistJS -->
+    <script src="./static/plugins/chartist/js/chartist.min.js"></script>
+    <script src="./static/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+    <script src="https://kit.fontawesome.com/dd19c71ac1.js" crossorigin="anonymous"></script>
+    <script src="./static/plugins/peity/jquery.peity.min.js"></script>
+    <script src="./static/js/plugins-init/peitychart.init.js"></script>
+
+
+    <script src="./static/js/dashboard/dashboard-1.js"></script>
+
+</body>
+
+</html>

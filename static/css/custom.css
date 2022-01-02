@@ -1,0 +1,13 @@
+/* */ 
+.fixed-sidebar .app-main .app-main__outer {
+	padding-left:0px;
+}
+
+.logo-image {
+	max-width: 65%
+}
+
+.app-header__logo {
+	display: flex !important ;
+
+}
